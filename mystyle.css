@@ -1,0 +1,328 @@
+/* EXTERNAL CSS FOR MY WEBSITE
+Created by: Vince Ruel Alonte
+For: GEOM 101
+DISCALIMER: The webpage created does NOT have a Responsive Design
+
+The 3 Items I would like be graded for Part 3 are:
+	1. 5 or more unique images (1 background image in the main page and 4 on the contact page)
+	2. Navigation Bar
+	3. 2 External Links (Social Media Links for Facebook and Instagram. LinkedIn link is not added yet since I have to fix my linkein account first)
+	
+These are three website used as my inspiration
+http://www.garysheng.com/
+https://www.quinntonharris.com/
+https://melaniedaveid.com/
+
+The Colors of the entire website is based on the
+the color of my main photo. I used the link below
+to pick the colors that I will be using
+https://coolors.co/c9c6c1-3b1d08-2c272b-626457-1b190c-4c381f/
+http://www.cssdrive.com/imagepalette/index.php
+*/
+
+
+
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+
+
+/* CSS USED FOR THE MAIN PAGE ONLY */
+
+/* This css class selector is used for the background image styling
+I choose the to the background-size COVER since I know that my image
+is a bit taller and wider than a web page and just want to cut its extents
+
+I was able to style my full background Image
+and title text with the guidance of this link
+https://www.w3schools.com/howto/tryhow_css_fullpage_demo.htm
+*/
+
+.bg {
+  /* The image used */
+  background-image: url("background.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* This the style for my Name on the Main webpage which
+is place on 65% from the top of the page */
+.title {
+    position: absolute;
+    top: 65%;
+    width: 100%;
+    text-align: center;
+    color: #C9C6C1;
+	font-family: 'Oswald', sans-serif;
+	font-size: 72px;
+	background-color: rgba(27, 25, 12, .7);
+}
+
+
+
+
+/* CSS FOR THE NAVIGATION BAR */
+
+/* I was able to create and style my navigation bar 
+with the guidance of this link
+https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_horizontal_black_active
+*/
+
+/* There is a difference in the styling between the
+Navigation bar in the front page and the other pages
+since I want the navigation bar to take up 10% of each
+my webpage.
+
+Front Page
+For the front page the navigation bar is inside the background image block
+therefore the height of the parent element is 100% of the webpage.
+The ul height for the front navbar should be 10%
+
+Other Pages
+For the other pages the navigation bar is a separate block which
+has a class name of navbar. The parent element of .navbar is the body itself.
+Therefore, the height of the block .navbar should be 10 percent of the entire webpage.
+The ul height for the other navigation bar is set to 100% since its parent element is
+the .navbar block.
+*/
+
+/* PROBLEM WITH THE NAVIGATION BAR 
+I cannot vertically center the links in the nav bar
+*/
+
+/* block style for the navigation bar for the other pages*/
+.navbar {
+height: 10%;
+}
+
+/* ul for the other web pages*/
+ul {
+  height: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(27, 25, 12, .7);
+}
+
+/* ul for the front page*/
+#frontnavbar {
+  height: 10%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(27, 25, 12, .7);
+}
+
+li {
+  float: right;
+  height: 100%;
+
+}
+
+li a {
+  height: 100%;
+  display: block;
+  font-family: 'Oswald', sans-serif;
+  color: #cdc9c3;
+  text-align: center;
+  font-size: 120%;
+  padding: 0px 14px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: rgba(27, 25, 12, 1);
+}
+
+/* the link to go to the front page or home page*/
+#logo {
+	float: left;
+	font-size: 180%;
+}
+
+
+
+/* CSS FOR OTHER PAGES (EDUCATION, WORK, CONTACT)*/
+
+/* The main style for this webpage is a split page.
+The left side is the header block and the right side
+is the information block
+
+ I was able to implement the split screen syle
+with the guidance from this link 
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_split_screen*/
+
+/* Split the screen in half */
+.split {
+  height: 90%;
+  width: 50%;
+  position: absolute;
+  top: 10%;
+  z-index: 0;
+  overflow-x: hidden;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: #857752;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color: #5e6766;
+}
+
+/*For the content to be centered horizontally and vertically */
+.centered {
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the image inside the centered container*/
+.centered img {
+  width: 20%;
+} 
+
+
+
+
+/* TAGS AND SELECTORS OVERRIDES
+
+Style for the different different heading tags and p tags
+*/
+/* OVERRIDES the H2 Tag */
+.pagehead {
+	font-family: 'Montserrat', sans-serif;
+	color: #cdc9c3;
+	font-size: 75px;
+}
+
+/* OVERRIDES the H3 Tag */
+.orghead {
+	font-family: 'Montserrat', sans-serif;
+	color: #cdc9c3;
+	font-size: 25px;
+}
+
+/* OVERRIDES the H4 Tag */
+.coursehead {
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 300;
+	color: #d19561;
+	font-size: 17px;
+	font-style: italic;
+}
+
+/* OVERRIDES the p Tag 
+edupara*/
+.edupara {
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 300;
+	color: #a4a69d;
+	font-size: 15px;
+}
+
+/* OVERRIDES the p Tag 
+workpara*/
+.workpara {
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 300;
+	color: #a4a69d;
+	font-size: 16px;
+}
+
+/* OVERRIDES the p Tag 
+contpara1*/
+.contpara1 {
+	padding-bottom: 15%;
+	font-family: 'Cardo', sans-serif;
+	font-weight: 700;
+	color: #2e281c;
+	font-size: 30px;
+}
+/* OVERRIDES the p Tag 
+contpara2*/
+.contpara2 {
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 300;
+	color: #2e281c;
+	font-size: 21px;
+}
+	
+
+
+/* SOCIAL MEDIA LINKS*/
+/* Style for social media links guided by w3shools.com
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_social_media_buttons */
+
+/* PROBLEM WITH THE SOCIAL MEDIA LINKS
+I cannot change the size of the social media link 
+I can change the size in the f12 tool changing to xx-large
+but n0t here
+*/
+.fa {
+  font-size: xx-large;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.5;
+}
+
+.fa-linkedin {
+  color: #2e281c;
+}
+
+.fa-facebook {
+  color: #2e281c;
+}
+
+.fa-instagram {
+  color: #2e281c;
+}
+
+
+
+
+
+/* CONTACT IMAGES
+
+This CSS code creates a row of 4 images under the CONTACT HEADING
+in the contact page.
+
+Style for the images is guided by this link
+https://www.w3schools.com/howto/howto_css_images_side_by_side.asp
+*/
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 25%;
+  padding: 5px;
+}
+
+.column img {
+	width: 100%;
+	border-radius: 50%;
+}
