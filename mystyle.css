@@ -197,7 +197,7 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_split_screen*/
 
 /* Style the image inside the centered container*/
 .centered img {
-  width: 140px;
+  width: 30%;
 } 
 
 
@@ -323,6 +323,6 @@ https://www.w3schools.com/howto/howto_css_images_side_by_side.asp
 }
 
 .column img {
-	width: 150px;
+	width: 100%;
 	border-radius: 50%;
 }
