@@ -213,7 +213,7 @@ Style for the different different heading tags and p tags
 .pagehead {
 	font-family: 'Montserrat', sans-serif;
 	color: #cdc9c3;
-	font-size: 75px;
+	font-size: 4vw;
 }
 
 /* OVERRIDES the H3 Tag */
